@@ -17,49 +17,49 @@ function Pizza(base){
 
 Pizza.prototype.topping = function(addTopping){
   this.base += " " +addTopping;
-  if (addTopping === "Refried Beans"){
+  if (addTopping === "<li>Refried Beans</li>"){
     this.price += 2;
   }
-  if (addTopping === "Zanahorias En Escabeche"){
+  if (addTopping === "<li>Zanahorias En Escabeche</li>"){
     this.price += 1.50;
   }
-  if (addTopping === "Kalamata Olives"){
+  if (addTopping === "<li>Kalamata Olives</li>"){
     this.price += 1.50;
   }
-  if (addTopping === "Artichoke Hearts"){
+  if (addTopping === "<li>Artichoke Hearts</li>"){
     this.price += 1.50;
   }
-  if (addTopping === "Salmon"){
+  if (addTopping === "<li>Salmon</li>"){
     this.price += 2;
   }
-  if (addTopping === "Fried Egg"){
+  if (addTopping === "<li>Fried Egg</li>"){
     this.price += 2;
   }
-  if (addTopping === "Mushroom"){
+  if (addTopping === "<li>Mushroom</li>"){
     this.price += 1;
   }
-  if (addTopping === "Roast Garlic"){
+  if (addTopping === "<li>Roast Garlic</li>"){
     this.price += 1;
   }
-  if (addTopping === "Carmelized Onion"){
+  if (addTopping === "<li>Carmelized Onion</li>"){
     this.price += 1;
   }
-  if (addTopping === "Roast Hatch Chile"){
+  if (addTopping === "<li>Roast Hatch Chile</li>"){
     this.price += 1.50;
   }
-  if (addTopping === "Soyrizo"){
+  if (addTopping === "<li>Soyrizo</li>"){
     this.price += 2;
   }
-  if (addTopping === "Tofu Cheese"){
+  if (addTopping === "<li>Tofu Cheese</li>"){
     this.price += 2;
   }
-  if (addTopping === "Daiya"){
+  if (addTopping === "<li>Daiya</li>"){
     this.price += 2;
   }
-  if (addTopping === "Tomato"){
+  if (addTopping === "<li>Tomato</li>"){
     this.price += 1;
   }
-  if (addTopping === "Avocado"){
+  if (addTopping === "<li>vocado</li>"){
     this.price += 1.50;
   }
 }
@@ -69,15 +69,13 @@ $(document).ready(function(){
 
   var totalPizzaPrice = 0;
   $("#add-pizza").click(function(event){
-    
     event.preventDefault();
-
     var newPizza = new Pizza ($("input[name='base']:checked").val());
     $("input[name='pizza-topping']:checked").each(function(){
       newPizza.topping($(this).val());
     });
     totalPizzaPrice += newPizza.price;
-    $("#userPizzaOrder").append("<li>" + newPizza.place + " inch " + newPizza.base + " : $ " + newPizza.price.toFixed(2) + "</li>");
+    $("#userPizzaOrder").append("<li>" + newPizza.place + " inch " + newPizza.base + " $ " + newPizza.price.toFixed(2) + "</li>");
     $('input[type=checkbox]').each(function(){
         this.checked = false;
       });
