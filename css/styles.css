@@ -97,7 +97,7 @@ img {
     margin-left: -512px;
   }
 }
-
+/* small screen */
 @media screen and (min-width: 769px) and (max-width: 992px){
   #color-backg {
    min-height: 100%;
@@ -128,15 +128,25 @@ img {
     background: rgba(0, 0, 0, 0.5);
   }
 
+  .left {
+    margin-top: -2000px;
+  }
+
+  #blue-jay {
+    margin-top: -2000px;
+    margin-right: -60px;
+  }
 
   h2 {
+    text-shadow: 2px 2px 2px #000;
     font-family: 'Almendra SC', serif;
     font-size: 50px;
     text-align: center;
-    color: #ff6800;
+    color: #ffd633;
   }
 
   label {
+    text-shadow: 2px 2px 2px #000;
     font-family: 'IM Fell Great Primer', serif;
     font-size: 30px;
     color: #e6e6e6;
@@ -162,7 +172,8 @@ img {
   }
 
   h1 {
-    color: #ff6800;
+    text-shadow: 2px 2px 2px #000;
+    color: #ffd633;
     font-family: 'Kaushan Script', cursive;
     display: inline-block;
     font-size: 70px;
@@ -176,7 +187,7 @@ img {
 
 }
 
-
+/* mobile screen*/
 @media screen and (max-width: 768px){
   #color-backg {
    min-height: 100%;
@@ -207,16 +218,30 @@ img {
     background: rgba(0, 0, 0, 0.5);
   }
 
+  .left {
+    display: none;
+    position: absolute;
+    margin-left: -999px;
+  }
+
+  .right {
+    /*margin-top: -2300px;*/
+    display: none;
+    position: absolute;
+    margin-left: -999px;
+  }
 
   h2 {
+    text-shadow: 2px 2px 2px #000;
     font-family: 'Almendra SC', serif;
     font-size: 25px;
     text-align: center;
     display: inline-block;
-    color: #ff6800;
+    color: #ffd633;
   }
 
   label {
+    text-shadow: 2px 2px 2px #000;
     font-family: 'IM Fell Great Primer', serif;
     font-size: 30px;
     color: #e6e6e6;
@@ -242,7 +267,8 @@ img {
   }
 
   h1 {
-    color: #ff6800;
+    text-shadow: 2px 2px 2px #000;
+    color: #ffd633;
     font-family: 'Kaushan Script', cursive;
     display: inline-block;
     font-size: 45px;
