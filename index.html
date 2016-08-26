@@ -3,6 +3,7 @@
   <head lang="en">
     <meta charset="utf-8">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.1.0.js"></script>
     <script src="js/scripts.js"></script>
@@ -10,16 +11,11 @@
     <title>|Mo's Pizza|</title>
   </head>
   <body>
-    <img id="color-backg" src="img/fight.jpg"></img>
+    <img id="color-backg" src="img/tarbosaurus.jpg"></img>
     <div class="container">
       <div class="row">
-        <div class="containerBox">
-          <div class="text-box">
-            <h1>Mo's Pizza</h1>
-          </div>
-          <img class="img-responsive" src="img/label.png"/>
-        </div>
         <div class="col-sm-6 col-sm-offset-3">
+          <h1 id="mo-pizza">Mo's Pizza</h1>
           <form id="transparent">
             <h2>Choose a Base:</h2>
             <div class="radio">
@@ -133,13 +129,13 @@
               </label>
             </div>
               <img id="blue-bird" src="img/bluebird.png"></img><br>
-            <button id="add-pizza" class="btn">Add This Pizza</button>
+            <button id="add-pizza" class="btn btn-danger">Add This Pizza</button>
           </form>
           <div>
             <ul id="userPizzaOrder">
 
             </ul>
-            <button id="order-pizza" class="btn">Place Your Order</button>
+            <button id="order-pizza" class="btn btn-danger">Place Your Order</button>
             <ul id="userPizzaTotal">
 
             </ul>
