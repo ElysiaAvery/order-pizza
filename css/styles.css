@@ -1,0 +1,21 @@
+#color-backg {
+ min-height: 100%;
+ min-width: 1024px;
+ width: 100%;
+ height: auto;
+ position: fixed;
+ top: 0;
+ left: 0;
+}
+
+#blue-bird {
+  max-width: 200px;
+  min-width: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  img#backg {
+    left: 50%;
+    margin-left: -512px;
+  }
+}
