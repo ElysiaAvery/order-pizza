@@ -5,6 +5,7 @@
 ## Description
 
 _A web app that allows the user to order multiple pizzas with their choice of toppings_
+_This site can be viewed on GitHub Pages [here](https://elysiaavery.github.io/order-pizza/)_
 
 ### Specifications
 
