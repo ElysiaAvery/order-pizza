@@ -12,10 +12,7 @@ function Pizza(base){
   if (base === "Gluten-Free,"){
     this.price = 17;
     this.place = 15;
-  } else {
-    alert("Choose a base!")
-    return[0];
-  }
+  } 
 }
 
 Pizza.prototype.topping = function(addTopping){
