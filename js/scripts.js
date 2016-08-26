@@ -63,3 +63,29 @@ Pizza.prototype.topping = function(addTopping){
     this.price += 1.50;
   }
 }
+
+//UI Logic
+$(document).ready(function(){
+  // $("form").submit(function(event){
+  //   event.preventDefault();
+  var totalPizzaPrice = 0;
+  $("#add-pizza").click(function(event){
+    event.preventDefault();
+
+    var newPizza = new Pizza ($("input[name='base']:checked").val());
+    $("input[name='pizza-topping']:checked").each(function(){
+      newPizza.topping($(this).val());
+    });
+    totalPizzaPrice += newPizza.price;
+    $("#userPizzaOrder").append("<li>" + newPizza.place + newPizza.base + newPizza.price.toFixed(2) + "</li>");
+    $('input[type=checkbox]').each(function(){
+        this.checked = false;
+      });
+    $('input[type=radio]').each(function(){
+          this.checked = false;
+      });
+  });
+  $("#order-pizza").click(function(event){
+    $("#userPizzaTotal").append("<li>" + totalPizzaPrice.toFixed(2) + "</li>");
+  });
+});
