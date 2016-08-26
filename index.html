@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>|Mo's Pizza|</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Mo's Pizza</h1>
+      <div class="row">
+        <div class="col-md-5">
+          <form>
+            <h2>Choose a Base:</h2>
+            <div class="radio">
+              <label>
+                <input type="radio" class="pizza-base" name="base" value="Regular,">
+                Regular - 12 inch
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" class="pizza-base" name="base" value="Large,">
+                Large - 18 inch
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" class="pizza-base" name="base" value="Gluten-Free,">
+                Gluten Free - 15 inch
+              </label>
+            </div>
+
+            <h2>Choose Some Toppings:</h2>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="pizza-topping" value="Refried Beans">
+                Refried Beans
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="pizza-topping" value="Zanahorias En Escabeche">
+                Zanahorias En Escabeche
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="pizza-topping" value="Kalamata Olives">
+                Kalamata Olives
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="pizza-topping" value="Artichoke Hearts">
+                Artichoke Hearts
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="pizza-topping" value="Salmon">
+                Salmon
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="pizza-topping" value="Fried Egg">
+                Fried Egg
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="pizza-topping" value="Mushroom">
+                Mushrooms
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="pizza-topping" value="Roast Garlic">
+                Roasted Garlic
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="pizza-topping" value="Carmelized Onion">
+                Carmelized Onions
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="pizza-topping" value="Roast Hatch Chile">
+                Roasted Hatch Chiles
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="pizza-topping" value="Soyrizo">
+                Soyrizo
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="pizza-topping" value="Tofu Cheese">
+                Faux Tofu Cheese
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="pizza-topping" value="Daiya">
+                Daiya Cheese
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="pizza-topping" value="Tomato">
+                Tomato Slices
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="pizza-topping" value="Avocado">
+                Avocado Slices
+              </label>
+            </div>
+            <button id="add-pizza" class="btn">Add This Pizza</button>
+          </form>
+          <div>
+            <ul id="userPizzaOrder">
+
+            </ul>
+            <button id="order-pizza" class="btn">Place Your Order</button>
+            <ul id="userPizzaTotal">
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

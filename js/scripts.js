@@ -1,15 +1,15 @@
 //Business Logic
 function Pizza(base){
   this.base = base;
-  if (base === "regular"){
+  if (base === "Regular,"){
     this.price = 12;
     this.place = 12;
   }
-  if (base === "large"){
+  if (base === "Large,"){
     this.price = 17;
     this.place = 18;
   }
-  if (base === "gluten-free"){
+  if (base === "Gluten-Free,"){
     this.price = 17;
     this.place = 15;
   }
@@ -17,49 +17,49 @@ function Pizza(base){
 
 Pizza.prototype.topping = function(addTopping){
   this.base += " " +addTopping;
-  if (addTopping === "refried-beans"){
+  if (addTopping === "Refried Beans"){
     this.price += 2;
   }
-  if (addTopping === "zanahorias-en-escabeche"){
+  if (addTopping === "Zanahorias En Escabeche"){
     this.price += 1.50;
   }
-  if (addTopping === "olives"){
+  if (addTopping === "Kalamata Olives"){
     this.price += 1.50;
   }
-  if (addTopping === "artichoke"){
+  if (addTopping === "Artichoke Hearts"){
     this.price += 1.50;
   }
-  if (addTopping === "salmon"){
+  if (addTopping === "Salmon"){
     this.price += 2;
   }
-  if (addTopping === "fried-egg"){
+  if (addTopping === "Fried Egg"){
     this.price += 2;
   }
-  if (addTopping === "mushroom"){
+  if (addTopping === "Mushroom"){
     this.price += 1;
   }
-  if (addTopping === "garlic"){
+  if (addTopping === "Roast Garlic"){
     this.price += 1;
   }
-  if (addTopping === "onion"){
+  if (addTopping === "Carmelized Onion"){
     this.price += 1;
   }
-  if (addTopping === "hatch-chile"){
+  if (addTopping === "Roast Hatch Chile"){
     this.price += 1.50;
   }
-  if (addTopping === "soyrizo"){
+  if (addTopping === "Soyrizo"){
     this.price += 2;
   }
-  if (addTopping === "tofu-cheese"){
+  if (addTopping === "Tofu Cheese"){
     this.price += 2;
   }
-  if (addTopping === "daiya"){
+  if (addTopping === "Daiya"){
     this.price += 2;
   }
-  if (addTopping === "tomato"){
+  if (addTopping === "Tomato"){
     this.price += 1;
   }
-  if (addTopping === "avocado"){
+  if (addTopping === "Avocado"){
     this.price += 1.50;
   }
 }
@@ -77,7 +77,7 @@ $(document).ready(function(){
       newPizza.topping($(this).val());
     });
     totalPizzaPrice += newPizza.price;
-    $("#userPizzaOrder").append("<li>" + newPizza.place + newPizza.base + newPizza.price.toFixed(2) + "</li>");
+    $("#userPizzaOrder").append("<li>" + newPizza.place + " inch " + newPizza.base + " : $ " + newPizza.price.toFixed(2) + "</li>");
     $('input[type=checkbox]').each(function(){
         this.checked = false;
       });
@@ -86,6 +86,6 @@ $(document).ready(function(){
       });
   });
   $("#order-pizza").click(function(event){
-    $("#userPizzaTotal").append("<li>" + totalPizzaPrice.toFixed(2) + "</li>");
+    $("#userPizzaTotal").append("<li>" + "Your Total is: $" + totalPizzaPrice.toFixed(2) + "</li>");
   });
 });
