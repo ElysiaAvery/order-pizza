@@ -8,9 +8,46 @@
  left: 0;
 }
 
+#label {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+}
+
 #blue-bird {
   max-width: 200px;
-  min-width: 100px;
+}
+
+.containerBox {
+    position: relative;
+    display: inline-block;
+}
+
+.text-box {
+    position: absolute;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+}
+
+.text-box:before {
+   content: '';
+   display: inline-block;
+   height: 100%;
+   vertical-align: middle;
+}
+
+h1 {
+   display: inline-block;
+   font-size: 100px;
+   color: #FFF;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 @media screen and (max-width: 1024px) {
@@ -18,4 +55,107 @@
     left: 50%;
     margin-left: -512px;
   }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px){
+  #color-backg {
+   min-height: 100%;
+   min-width: 1024px;
+   width: 100%;
+   height: auto;
+   position: fixed;
+   top: 0;
+   left: 0;
+  }
+
+  #label {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+  }
+
+  .containerBox {
+      position: relative;
+      display: inline-block;
+  }
+
+  .text-box {
+      position: absolute;
+      height: 100%;
+      text-align: center;
+      width: 100%;
+  }
+
+  .text-box:before {
+     content: '';
+     display: inline-block;
+     height: 100%;
+     vertical-align: middle;
+  }
+
+  h1 {
+     display: inline-block;
+     font-size: 70px;
+     color: #FFF;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+}
+
+
+@media screen and (max-width: 768px){
+  #color-backg {
+   min-height: 100%;
+   min-width: 1024px;
+   width: 100%;
+   height: auto;
+   position: fixed;
+   top: 0;
+   left: 0;
+  }
+
+  #label {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+  }
+
+  .containerBox {
+      position: relative;
+      display: inline-block;
+  }
+
+  .text-box {
+      position: absolute;
+      height: 100%;
+      text-align: center;
+      width: 100%;
+  }
+
+  .text-box:before {
+     content: '';
+     display: inline-block;
+     height: 100%;
+     vertical-align: middle;
+  }
+
+  h1 {
+     display: inline-block;
+     font-size: 45px;
+     color: #FFF;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
 }
