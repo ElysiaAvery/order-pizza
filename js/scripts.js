@@ -1,4 +1,13 @@
 //Business Logic
+function Address(street, city) {
+  this.street = street;
+  this.city = city;
+}
+
+Address.prototype.fullAddress = function() {
+  return this.street + ", " + this.city;
+}
+
 function Pizza(base){
   this.base = base;
   if (base === "Regular,"){
@@ -66,7 +75,7 @@ Pizza.prototype.topping = function(addTopping){
 
 //UI Logic
 $(document).ready(function(){
-
+debugger;
   var totalPizzaPrice = 0;
   $("#add-pizza").click(function(event){
     event.preventDefault();
@@ -83,7 +92,26 @@ $(document).ready(function(){
           this.checked = false;
       });
   });
+  $("#bringModal").click(function(){
+    $('#startModal').modal();
+    $("#address-modal").submit(function(event){
+      $(".new-address").each(function() {
+        var inputtedStreet = $(this).find("input#street").val();
+        var inputtedCity = $(this).find("input#city").val();
+        var newAddress = new Address(inputtedStreet, inputtedCity)
+        addresses.push(newAddress)
+      $('#startModal').modal('hide');
+      console.log();
+    })
   $("#order-pizza").click(function(event){
+    console.log();
     $("#userPizzaTotal").append("<li>" + "Your Total is: $" + totalPizzaPrice.toFixed(2) + "</li>");
+    $("ul#userDelivery").text("");
+      newContact.addresses.forEach(function(address) {
+        $("ul#userDelivery").append("<li>" + address.fullAddress() + "</li>");
+
+    })
   });
+});
+});
 });

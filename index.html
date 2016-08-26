@@ -3,19 +3,47 @@
   <head lang="en">
     <meta charset="utf-8">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Almendra+SC|Fascinate+Inline|IM+Fell+Great+Primer|Kaushan+Script|Pacifico" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Almendra+SC|Fascinate+Inline|IM+Fell+Great+Primer|Kaushan+Script|Pacifico" rel="stylesheet">
     <title>|Mo's Pizza|</title>
   </head>
   <body>
+    <div class="modal fade" id="startModal" tabindex="-1" role="dialog" aria-labelledby="startModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="startModalLabel">What is your address?</h4>
+          </div>
+          <div class="modal-body">
+            <form id="address-modal">
+              <div class="form-group">
+                <label for="street" class="control-label">Street:</label>
+                <input type="text" class="form-control" id="street">
+              </div>
+              <div class="form-group">
+                <label for="city" class="control-label">City</label>
+                <input type="text" class="form-control" id="city">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                <button id="address-submit" type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <img id="color-backg" src="img/tarbosaurus.jpg"></img>
     <div class="container">
       <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
           <h1 id="mo-pizza">Mo's Pizza</h1>
           <form id="transparent">
+            <button type="button" id="bringModal" class="btn btn-danger">Add Address</button>
             <h2>Choose a Base:</h2>
             <div class="radio">
               <label>
@@ -135,6 +163,9 @@
           </form>
           <button id="order-pizza" class="btn btn-danger">Place Your Order</button>
           <ul id="userPizzaTotal">
+
+          </ul>
+          <ul id="userDelivery">
 
           </ul>
         </div>
