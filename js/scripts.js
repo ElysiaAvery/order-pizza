@@ -66,10 +66,11 @@ Pizza.prototype.topping = function(addTopping){
 
 //UI Logic
 $(document).ready(function(){
-  
+
   var totalPizzaPrice = 0;
   $("#add-pizza").click(function(event){
     event.preventDefault();
+    $("#blue-bird").addClass('animated jello');
     var newPizza = new Pizza ($("input[name='base']:checked").val());
     $("input[name='pizza-topping']:checked").each(function(){
       newPizza.topping($(this).val());
