@@ -12,7 +12,7 @@ function Pizza(base){
   if (base === "Gluten-Free,"){
     this.price = 17;
     this.place = 15;
-  } 
+  }
 }
 
 Pizza.prototype.topping = function(addTopping){
@@ -59,7 +59,7 @@ Pizza.prototype.topping = function(addTopping){
   if (addTopping === "<li>Tomato</li>"){
     this.price += 1;
   }
-  if (addTopping === "<li>vocado</li>"){
+  if (addTopping === "<li>Avocado</li>"){
     this.price += 1.50;
   }
 }
