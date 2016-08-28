@@ -17,49 +17,49 @@ function Pizza(base){
 
 Pizza.prototype.topping = function(addTopping){
   this.base += " " +addTopping;
-  if (addTopping === "<li>Refried Beans</li>"){
+  if (addTopping === "Refried Beans"){
     this.price += 2;
   }
-  if (addTopping === "<li>Zanahorias En Escabeche</li>"){
+  if (addTopping === "Zanahorias En Escabeche"){
     this.price += 1.50;
   }
-  if (addTopping === "<li>Kalamata Olives</li>"){
+  if (addTopping === "Kalamata Olives"){
     this.price += 1.50;
   }
-  if (addTopping === "<li>Artichoke Hearts</li>"){
+  if (addTopping === "Artichoke Hearts"){
     this.price += 1.50;
   }
-  if (addTopping === "<li>Salmon</li>"){
+  if (addTopping === "Salmon"){
     this.price += 2;
   }
-  if (addTopping === "<li>Fried Egg</li>"){
+  if (addTopping === "Fried Egg"){
     this.price += 2;
   }
-  if (addTopping === "<li>Mushroom</li>"){
+  if (addTopping === "Mushroom"){
     this.price += 1;
   }
-  if (addTopping === "<li>Roast Garlic</li>"){
+  if (addTopping === "Roast Garlic"){
     this.price += 1;
   }
-  if (addTopping === "<li>Carmelized Onion</li>"){
+  if (addTopping === "Carmelized Onion"){
     this.price += 1;
   }
-  if (addTopping === "<li>Roast Hatch Chile</li>"){
+  if (addTopping === "Roast Hatch Chile"){
     this.price += 1.50;
   }
-  if (addTopping === "<li>Soyrizo</li>"){
+  if (addTopping === "Soyrizo"){
     this.price += 2;
   }
-  if (addTopping === "<li>Tofu Cheese</li>"){
+  if (addTopping === "Tofu Cheese"){
     this.price += 2;
   }
-  if (addTopping === "<li>Daiya</li>"){
+  if (addTopping === "Daiya"){
     this.price += 2;
   }
-  if (addTopping === "<li>Tomato</li>"){
+  if (addTopping === "Tomato"){
     this.price += 1;
   }
-  if (addTopping === "<li>Avocado</li>"){
+  if (addTopping === "Avocado"){
     this.price += 1.50;
   }
 }
@@ -76,7 +76,7 @@ $(document).ready(function(){
       newPizza.topping($(this).val());
     });
     totalPizzaPrice += newPizza.price;
-    $("#userPizzaOrder").append("<li>" + newPizza.place + " inch " + newPizza.base + " $ " + newPizza.price.toFixed(2) + "</li>");
+    $("#userPizzaOrder").append("<li>" + newPizza.place + " inch " + "<li>" + newPizza.base + "</li>" + " $ " + newPizza.price.toFixed(2) + "</li>" + "<hr>");
     $('input[type=checkbox]').each(function(){
         this.checked = false;
       });

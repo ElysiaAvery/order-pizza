@@ -100,6 +100,12 @@ img {
   margin-right: auto;
 }
 
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
 p {
   text-shadow: 2px 2px 2px #000;
   color: pink;
@@ -227,6 +233,12 @@ p {
     margin-right: auto;
   }
 
+  hr {
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+
   p {
     text-shadow: 2px 2px 2px #000;
     color: pink;
@@ -345,6 +357,12 @@ p {
     display: block;
     margin-left: 36%;
     margin-right: auto;
+  }
+
+  hr {
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   }
 
 }
